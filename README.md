@@ -449,6 +449,6 @@ For support, create an issue in the GitHub repository.
   
 **🌟 If you find this project useful, please give it a star!**
 
-[![Star History Chart](https://www.star-history.com/#EL-RAS/sales-inventory-system&type=Date)]
+[![Star History Chart](https://www.star-history.com/#EL-RAS/sales-inventory-system&type=date&legend=top-left)]
 
 </div>
