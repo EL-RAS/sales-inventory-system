@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "67ac9e68-bd81-4dce-bcda-66f847290fa4",
+		"name": "sales-inventory-system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37405316"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/login",
+			"request": {
+				"auth": {
+					"type": "inherit",
+					"inherit": {}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"admin@example.com\",\"password\":\"password123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/products",
+			"request": {
+				"auth": {
+					"type": "inherit",
+					"inherit": {}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/products"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/warehouses",
+			"request": {
+				"auth": {
+					"type": "inherit",
+					"inherit": {}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/warehouses"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/customers",
+			"request": {
+				"auth": {
+					"type": "inherit",
+					"inherit": {}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/inventory",
+			"request": {
+				"auth": {
+					"type": "inherit",
+					"inherit": {}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_id\": 11,\r\n    \"warehouse_id\": 1,\r\n    \"quantity\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/inventory"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/inventory",
+			"request": {
+				"auth": {
+					"type": "inherit",
+					"inherit": {}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/inventory"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/orders",
+			"request": {
+				"auth": {
+					"type": "inherit",
+					"inherit": {}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_id\": 13,\r\n    \"payment_method\": \"Cash\",\r\n    \"items\": [\r\n      {\r\n        \"product_id\": 11,\r\n        \"quantity\": 2\r\n      }\r\n    ]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/orders"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Test User\",\r\n    \"email\": \"testuser@example.com\",\r\n    \"password\": \"password123\",\r\n    \"password_confirmation\": \"password123\",\r\n    \"phone\": \"+919876543210\",\r\n    \"current_status\": \"Looking for Job\",\r\n    \"interests\": [\"IT Field\", \"Coding\", \"Front End\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/register"
+			},
+			"response": []
+		}
+	]
+}
